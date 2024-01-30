@@ -29,7 +29,6 @@
     "@angular/router": "~14.2.10",
     "@igniteui/material-icons-extended": "^2.11.0",
     "@infragistics/igniteui-angular": "^14.2.5",
-    "@mobiscroll/angular": "^5.19.2",
     "@sentry/angular": "~7.19.0",
     "@sentry/tracing": "~7.19.0",
     "crypto-js": "~4.1.1",
