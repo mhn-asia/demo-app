@@ -1,0 +1,110 @@
+/* Variables */
+$cad-vertical-navigation-compact-width: 112px;
+
+cad-vertical-navigation {
+
+    /* Compact appearance overrides */
+    &.cad-vertical-navigation-appearance-compact {
+        width: $cad-vertical-navigation-compact-width;
+        min-width: $cad-vertical-navigation-compact-width;
+        max-width: $cad-vertical-navigation-compact-width;
+
+        /* Left positioned */
+        &.cad-vertical-navigation-position-left {
+
+            /* Side mode */
+            &.cad-vertical-navigation-mode-side {
+                margin-left: -$cad-vertical-navigation-compact-width;
+            }
+
+            /* Opened */
+            &.cad-vertical-navigation-opened {
+                margin-left: 0;
+            }
+        }
+
+        /* Right positioned */
+        &.cad-vertical-navigation-position-right {
+
+            /* Side mode */
+            &.cad-vertical-navigation-mode-side {
+                margin-right: -$cad-vertical-navigation-compact-width;
+            }
+
+            /* Opened */
+            &.cad-vertical-navigation-opened {
+                margin-right: 0;
+            }
+
+            /* Aside wrapper */
+            .cad-vertical-navigation-aside-wrapper {
+                left: auto;
+                right: $cad-vertical-navigation-compact-width;
+            }
+        }
+
+        /* Wrapper */
+        .cad-vertical-navigation-wrapper {
+
+            /* Content */
+            .cad-vertical-navigation-content {
+
+                > cad-vertical-navigation-aside-item,
+                > cad-vertical-navigation-basic-item {
+
+                    .cad-vertical-navigation-item-wrapper {
+                        margin: 4px 8px 0 8px;
+
+                        .cad-vertical-navigation-item {
+                            flex-direction: column;
+                            justify-content: center;
+                            padding: 12px;
+                            border-radius: 6px;
+
+                            .cad-vertical-navigation-item-icon {
+                                margin-right: 0;
+                            }
+
+                            .cad-vertical-navigation-item-title-wrapper {
+                                margin-top: 8px;
+
+                                .cad-vertical-navigation-item-title {
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    text-align: center;
+                                    line-height: 16px;
+                                }
+
+                                .cad-vertical-navigation-item-subtitle {
+                                    display: none !important;
+                                }
+                            }
+
+                            .cad-vertical-navigation-item-badge {
+                                position: absolute;
+                                top: 12px;
+                                left: 64px;
+                            }
+                        }
+                    }
+
+                    > cad-vertical-navigation-collapsable-item {
+                        display: none
+                    }
+
+                    > cad-vertical-navigation-group-item {
+
+                        > .cad-vertical-navigation-item-wrapper {
+                            display: none
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Aside wrapper */
+        .cad-vertical-navigation-aside-wrapper {
+            left: $cad-vertical-navigation-compact-width;
+        }
+    }
+}

@@ -1,0 +1,180 @@
+/* Root navigation specific */
+cad-horizontal-navigation {
+
+    .cad-horizontal-navigation-wrapper {
+        display: flex;
+        align-items: center;
+
+        /* Basic, Branch */
+        cad-horizontal-navigation-basic-item,
+        cad-horizontal-navigation-branch-item {
+
+            @screen sm {
+
+                &:hover {
+
+                    .cad-horizontal-navigation-item-wrapper {
+                        @apply bg-hover;
+                    }
+                }
+            }
+
+            .cad-horizontal-navigation-item-wrapper {
+                border-radius: 4px;
+                overflow: hidden;
+
+                .cad-horizontal-navigation-item {
+                    padding: 0 16px;
+                    cursor: pointer;
+                    user-select: none;
+
+                    .cad-horizontal-navigation-item-icon {
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+
+        /* Basic - When item active (current link) */
+        cad-horizontal-navigation-basic-item {
+
+            .cad-horizontal-navigation-item-active,
+            .cad-horizontal-navigation-item-active-forced {
+
+                .cad-horizontal-navigation-item-title {
+                    @apply text-primary #{'!important'};
+                }
+
+                .cad-horizontal-navigation-item-subtitle {
+                    @apply text-primary-400 #{'!important'};
+
+                    .dark & {
+                        @apply text-primary-600 #{'!important'};
+                    }
+                }
+
+                .cad-horizontal-navigation-item-icon {
+                    @apply text-primary #{'!important'};
+                }
+            }
+        }
+
+        /* Branch - When menu open */
+        cad-horizontal-navigation-branch-item {
+
+            .cad-horizontal-navigation-menu-active,
+            .cad-horizontal-navigation-menu-active-forced {
+
+                .cad-horizontal-navigation-item-wrapper {
+                    @apply bg-hover;
+                }
+            }
+        }
+
+        /* Spacer */
+        cad-horizontal-navigation-spacer-item {
+            margin: 12px 0;
+        }
+    }
+}
+
+/* Menu panel specific */
+.cad-horizontal-navigation-menu-panel {
+
+    .cad-horizontal-navigation-menu-item {
+        height: auto;
+        min-height: 0;
+        line-height: normal;
+        white-space: normal;
+
+        /* Basic, Branch */
+        cad-horizontal-navigation-basic-item,
+        cad-horizontal-navigation-branch-item,
+        cad-horizontal-navigation-divider-item {
+            display: flex;
+            flex: 1 1 auto;
+        }
+
+        /* Divider */
+        cad-horizontal-navigation-divider-item {
+            margin: 8px -16px;
+
+            .cad-horizontal-navigation-item-wrapper {
+                height: 1px;
+                box-shadow: 0 1px 0 0;
+            }
+        }
+    }
+}
+
+/* Navigation menu item common */
+.cad-horizontal-navigation-menu-item {
+
+    /* Basic - When item active (current link) */
+    cad-horizontal-navigation-basic-item {
+
+        .cad-horizontal-navigation-item-active,
+        .cad-horizontal-navigation-item-active-forced {
+
+            .cad-horizontal-navigation-item-title {
+                @apply text-primary #{'!important'};
+            }
+
+            .cad-horizontal-navigation-item-subtitle {
+                @apply text-primary-400 #{'!important'};
+
+                .dark & {
+                    @apply text-primary-600 #{'!important'};
+                }
+            }
+
+            .cad-horizontal-navigation-item-icon {
+                @apply text-primary #{'!important'};
+            }
+        }
+    }
+
+    .cad-horizontal-navigation-item-wrapper {
+        width: 100%;
+
+        &.cad-horizontal-navigation-item-has-subtitle {
+
+            .cad-horizontal-navigation-item {
+                min-height: 56px;
+            }
+        }
+
+        .cad-horizontal-navigation-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 48px;
+            width: 100%;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+
+            .cad-horizontal-navigation-item-title-wrapper {
+
+                .cad-horizontal-navigation-item-subtitle {
+                    font-size: 12px;
+                }
+            }
+
+            .cad-horizontal-navigation-item-badge {
+                margin-left: auto;
+
+                .cad-horizontal-navigation-item-badge-content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 10px;
+                    font-weight: 600;
+                    white-space: nowrap;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}

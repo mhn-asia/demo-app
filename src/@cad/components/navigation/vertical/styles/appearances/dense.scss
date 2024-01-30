@@ -1,0 +1,192 @@
+/* Variables */
+$cad-vertical-navigation-width: 280px;
+$cad-vertical-navigation-dense-width: 80px;
+
+cad-vertical-navigation {
+
+    /* Dense appearance overrides */
+    &.cad-vertical-navigation-appearance-dense {
+
+        &:not(.cad-vertical-navigation-mode-over) {
+            width: $cad-vertical-navigation-dense-width;
+            min-width: $cad-vertical-navigation-dense-width;
+            max-width: $cad-vertical-navigation-dense-width;
+
+            /* Left positioned */
+            &.cad-vertical-navigation-position-left {
+
+                /* Side mode */
+                &.cad-vertical-navigation-mode-side {
+                    margin-left: -$cad-vertical-navigation-dense-width;
+                }
+
+                /* Opened */
+                &.cad-vertical-navigation-opened {
+                    margin-left: 0;
+                }
+            }
+
+            /* Right positioned */
+            &.cad-vertical-navigation-position-right {
+
+                /* Side mode */
+                &.cad-vertical-navigation-mode-side {
+                    margin-right: -$cad-vertical-navigation-dense-width;
+                }
+
+                /* Opened */
+                &.cad-vertical-navigation-opened {
+                    margin-right: 0;
+                }
+
+                /* Aside wrapper */
+                .cad-vertical-navigation-aside-wrapper {
+                    left: auto;
+                    right: $cad-vertical-navigation-dense-width;
+                }
+
+                &.cad-vertical-navigation-hover {
+
+                    .cad-vertical-navigation-aside-wrapper {
+                        left: auto;
+                        right: $cad-vertical-navigation-width;
+                    }
+                }
+            }
+        }
+
+        /* Wrapper */
+        .cad-vertical-navigation-wrapper {
+
+            /* Content */
+            .cad-vertical-navigation-content {
+
+                cad-vertical-navigation-aside-item,
+                cad-vertical-navigation-basic-item,
+                cad-vertical-navigation-collapsable-item,
+                cad-vertical-navigation-group-item {
+
+                    .cad-vertical-navigation-item-wrapper {
+
+                        .cad-vertical-navigation-item {
+                            width: $cad-vertical-navigation-dense-width - 24px;
+                            min-width: $cad-vertical-navigation-dense-width - 24px;
+                            max-width: $cad-vertical-navigation-dense-width - 24px;
+
+                            .cad-vertical-navigation-item-arrow,
+                            .cad-vertical-navigation-item-badge,
+                            .cad-vertical-navigation-item-title-wrapper {
+                                transition: opacity 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+                            }
+                        }
+                    }
+                }
+
+                cad-vertical-navigation-group-item {
+
+                    &:first-of-type {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+
+        &:not(.cad-vertical-navigation-hover):not(.cad-vertical-navigation-mode-over) {
+
+            /* Wrapper */
+            .cad-vertical-navigation-wrapper {
+
+                /* Content */
+                .cad-vertical-navigation-content {
+
+                    .cad-vertical-navigation-item-wrapper {
+
+                        .cad-vertical-navigation-item {
+                            padding: 10px 16px;
+
+                            .cad-vertical-navigation-item-arrow,
+                            .cad-vertical-navigation-item-badge,
+                            .cad-vertical-navigation-item-title-wrapper {
+                                white-space: nowrap;
+                                opacity: 0;
+                            }
+                        }
+                    }
+
+                    cad-vertical-navigation-collapsable-item {
+
+                        .cad-vertical-navigation-item-children {
+                            display: none;
+                        }
+                    }
+
+                    cad-vertical-navigation-group-item {
+
+                        > .cad-vertical-navigation-item-wrapper {
+
+                            .cad-vertical-navigation-item {
+
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 20px;
+                                    width: 23px;
+                                    border-top-width: 2px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Aside wrapper */
+        .cad-vertical-navigation-aside-wrapper {
+            left: $cad-vertical-navigation-dense-width;
+        }
+
+        /* Hover */
+        &.cad-vertical-navigation-hover {
+
+            .cad-vertical-navigation-wrapper {
+                width: $cad-vertical-navigation-width;
+
+                .cad-vertical-navigation-content {
+
+                    .cad-vertical-navigation-item-wrapper {
+
+                        .cad-vertical-navigation-item {
+                            width: $cad-vertical-navigation-width - 24px;
+                            min-width: $cad-vertical-navigation-width - 24px;
+                            max-width: $cad-vertical-navigation-width - 24px;
+
+                            .cad-vertical-navigation-item-arrow,
+                            .cad-vertical-navigation-item-badge,
+                            .cad-vertical-navigation-item-title-wrapper {
+                                white-space: nowrap;
+                                animation: removeWhiteSpaceNoWrap 1ms linear 350ms;
+                                animation-fill-mode: forwards;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .cad-vertical-navigation-aside-wrapper {
+                left: $cad-vertical-navigation-width;
+            }
+        }
+    }
+}
+
+@keyframes removeWhiteSpaceNoWrap {
+    0% {
+        white-space: nowrap
+    }
+    99% {
+        white-space: nowrap
+    }
+    100% {
+        white-space: normal;
+    }
+}

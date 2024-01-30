@@ -1,0 +1,13 @@
+/* ----------------------------------------------------------------------------------------------------- */
+/*  @ Import/write your custom styles here.
+/*  @ Styles from this file will override 'vendors.scss' and Cad's base styles.
+/* ----------------------------------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.igx-input-group--border.igx-input-group--filled .igx-input-group__label,
+.igx-input-group--border.igx-input-group--file .igx-input-group__label,
+.igx-input-group--border.igx-input-group--focused .igx-input-group__label,
+.igx-input-group--border.igx-input-group--placeholder .igx-input-group__label {
+    background: rgba(255, 255, 255, 0.922) !important;
+    font-weight: 800;
+}

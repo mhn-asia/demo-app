@@ -1,0 +1,40 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:0-16",
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "workbench.colorTheme": "Cobalt2",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+      },
+      "extensions": [
+        "vscode-icons-team.vscode-icons",
+        "editorconfig.editorconfig",
+        "davidanson.vscode-markdownlint",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "wesbos.theme-cobalt2",
+        "shardulm94.trailing-spaces",
+        "angular.ng-template",
+        "johnpapa.angular2",
+        "sibiraj-s.vscode-scss-formatter",
+        "gruntfuggly.todo-tree",
+        "nrwl.angular-console",
+        "meganrogge.template-string-converter",
+        "mikael.angular-beastcode",
+        "ms-vscode.vscode-typescript-tslint-plugin",
+        "eg2.vscode-npm-script",
+        "christian-kohler.path-intellisense",
+        "github.vscode-pull-request-github",
+        "huizhou.githd"
+      ]
+    }
+  },
+  "remoteUser": "node",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "latest"
+    }
+  }
+}
