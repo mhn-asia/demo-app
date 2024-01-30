@@ -56,7 +56,6 @@
               "src/@cad/styles/themes.scss",
               "src/styles/vendors.scss",
               "src/@cad/styles/main.scss",
-              "./node_modules/@infragistics/igniteui-angular/styles/igniteui-angular.css",
               "src/styles/styles.scss",
               "src/styles/tailwind.scss"
             ],

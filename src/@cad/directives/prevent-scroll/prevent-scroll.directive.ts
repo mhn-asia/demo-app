@@ -1,5 +1,4 @@
 import { AfterViewInit, Directive, Host, Input, NgModule, Optional, OnDestroy, Inject } from '@angular/core';
-import { IgxGridBaseDirective, IgxGridComponent, IGX_GRID_BASE } from '@infragistics/igniteui-angular';
 
 @Directive({
     // eslint-disable-next-line @angular-eslint/directive-selector
@@ -25,7 +24,7 @@ export class IgxPreventDocumentScrollDirective implements AfterViewInit, OnDestr
     /**
      * @hidden
      */
-    constructor(@Host() @Optional() @Inject(IGX_GRID_BASE) private grid: IgxGridBaseDirective) {
+    constructor() {
     }
 
     public ngAfterViewInit() {
@@ -47,7 +46,8 @@ export class IgxPreventDocumentScrollDirective implements AfterViewInit, OnDestr
     }
 
     private getGridTBody(): HTMLElement {
-        return this.grid.tbody.nativeElement;
+        // return this.grid.tbody.nativeElement;
+		return;
     }
 }
 

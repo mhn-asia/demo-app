@@ -1,5 +1,4 @@
 import { Component, ViewEncapsulation, OnInit, OnDestroy, SimpleChanges } from "@angular/core";
-import { IGX_INPUT_GROUP_TYPE } from "@infragistics/igniteui-angular";
 
 @Component({
 	selector: "demo",

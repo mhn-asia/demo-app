@@ -1,6 +1,5 @@
 import { Component, ViewEncapsulation, OnInit, OnDestroy, SimpleChanges } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
-import { IGX_INPUT_GROUP_TYPE } from "@infragistics/igniteui-angular";
 
 @Component({
 	selector: "main",
@@ -59,7 +58,7 @@ export class MainComponent implements OnInit, OnDestroy {
 
 
 
-	
+
 	// -----------------------------------------------------------------------------------------------------
 	// @ Private methods
 	// -----------------------------------------------------------------------------------------------------
